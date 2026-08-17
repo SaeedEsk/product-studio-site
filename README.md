@@ -38,6 +38,19 @@ deployable `out/` directory.
 Cloudflare Pages does not need an environment variable or server for this
 version. The contact form uses the visitor's default email client.
 
+## Deploy with GitHub Pages temporarily
+
+The repository includes `.github/workflows/deploy-pages.yml`. Every push to
+`main` builds and deploys the static export through GitHub Actions. The build
+automatically uses `/product-studio-site` as its repository base path, so the
+project URL works before a custom domain is connected.
+
+In the repository on GitHub, open **Settings → Pages** and set **Source** to
+**GitHub Actions** if GitHub has not enabled it automatically. After the first
+successful workflow, the temporary site will be available at:
+
+`https://saeedesk.github.io/product-studio-site/`
+
 ## Domain checklist
 
 - Check `northstarproductstudio.com` first, then `northstarbuilds.com`.
